@@ -12,8 +12,9 @@ import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
-EditText link1;
+    EditText link1;
     String per;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,11 +24,11 @@ EditText link1;
             @Override
             public void onClick(View view) {
 
-                link1=findViewById(R.id.link);
+                link1 = findViewById(R.id.link);
                 //per=getString(link1);
-                per=link1.getText().toString();
+                per = link1.getText().toString();
 
-               // Toast.makeText(getApplicationContext(),per, Toast.LENGTH_SHORT).show();
+                // Toast.makeText(getApplicationContext(),per, Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(per)));
             }
         });
